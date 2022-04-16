@@ -1,0 +1,34 @@
+@use './constants.scss';
+
+.nodeCon {
+  outline: 1px solid constants.$gridBorderColor;
+  width: 30px;
+  height: 30px;
+  background-color: constants.$gridColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
+  &:hover {
+    background-color: #b1af9e;
+    transition: all 0.05s ease;
+  }
+
+  .svgTing {
+    transform: rotate(180deg);
+    width: 80%;
+  }
+
+  &.wallTing {
+    background-color: black;
+  }
+}

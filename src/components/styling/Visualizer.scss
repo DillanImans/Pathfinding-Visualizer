@@ -1,0 +1,22 @@
+@use './constants';
+
+.visualizerCon {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: constants.$backgroundColor;
+  font-family: constants.$fontFamily;
+  font-weight: bold;
+
+  .gridVisualizerCon {
+    height: 66vh;
+    width: 89vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+}

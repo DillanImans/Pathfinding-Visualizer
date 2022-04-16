@@ -1,0 +1,78 @@
+@use './constants.scss';
+
+.headerAndKeysCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 20px;
+
+  .titleCon {
+    font-size: 60px;
+    text-decoration: underline;
+  }
+
+  .keysCon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .vdButton {
+      width: 200px;
+      height: 50px;
+      background-color: constants.$dijkstraColor;
+      border-radius: 15px;
+      border: 5px solid black;
+      font-family: constants.$fontFamily;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        background-color: #41D59A;
+      }
+    }
+
+    img {
+      width: 30px;
+
+      &.arrowSvg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .keyOuterCon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .keyInnerCon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          margin-right: 5px;
+        }
+
+        .wall {
+          width: 30px;
+          height: 30px;
+          background-color: black;
+          margin-right: 5px;
+        }
+
+        .shortestPath {
+          width: 30px;
+          height: 30px;
+          background-color: constants.$shortestPathColor;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
