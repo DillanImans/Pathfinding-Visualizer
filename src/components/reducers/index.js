@@ -16,9 +16,18 @@ const gridReducer = (state = [], action) => {
   return state;
 }
 
+const afterVisualizeReducer = (state = false, action) => {
+  if (action.type === "AFTER_VISUALIZE"){
+    state = action.payload;
+  }
+
+  return state;
+}
+
 const comRed = combineReducers({
   mouseIsPressedState: mouseIsPressedReducer,
-  gridState: gridReducer
+  gridState: gridReducer,
+  afterVisualizeState: afterVisualizeReducer
 })
 
 export default comRed;

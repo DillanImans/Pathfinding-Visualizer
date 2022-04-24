@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './styling/Grid.scss';
-import Node from './Node.js';
+import Node from './Node.jsx';
 import { connect } from 'react-redux';
 import { mouseIsPressedAction, gridAction } from './actions';
 
@@ -15,6 +15,7 @@ class Grid extends Component {
       targetnodeRow: 7,
     }
   }
+  
   // Start and Target node positions are in state for future user-able-to-position feature.
 
   componentDidMount(){
@@ -47,6 +48,7 @@ class Grid extends Component {
     }
   }
 
+  // To delete and create walls.
   handleMouseDown = (col, row) => {
     if ((col === this.state.startnodeCol && row === this.state.startnodeRow) ||
        (col === this.state.targetnodeCol && row === this.state.targetnodeRow)){
@@ -64,6 +66,7 @@ class Grid extends Component {
     }
   }
 
+  // To delete and create walls.
   handleMouseEnter = (col, row) => {
     if ((col === this.state.startnodeCol && row === this.state.startnodeRow) ||
       (col === this.state.targetnodeCol && row === this.state.targetnodeRow)){
@@ -81,6 +84,7 @@ class Grid extends Component {
     }
   }
 
+  // To default the state back to no wall updates.
   handleMouseUp = (col, row) => {
     this.props.mouseIsPressedAction("");
   }
@@ -108,7 +112,7 @@ class Grid extends Component {
     return newGrid;
   }
 
-
+  // Not really affecting as of this current commit.
   handleContextMenu(col, row){
     if ((col === this.state.startnodeCol && row === this.state.startnodeRow) ||
     (col === this.state.targetnodeCol && row === this.state.targetnodeRow)){
@@ -126,16 +130,6 @@ class Grid extends Component {
   // Update Target Pos through Drag (to be continued)
   // getNewGridWithNewTarget = (grid, col, row) => {
   // }
-
-
-
-
-  // Animate Dijkstra
-
-
-  // Animate Short Path
-
-
 
 
   render(){

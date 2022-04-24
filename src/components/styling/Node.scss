@@ -18,6 +18,11 @@
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
 
+    @media only screen and (max-height: 640px) {
+      height: 20px;
+      width: 20px;
+    }
+
   &:hover {
     background-color: #b1af9e;
     transition: all 0.05s ease;
@@ -30,5 +35,64 @@
 
   &.wallTing {
     background-color: black;
+  }
+
+
+  &.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes visitedAnimation {
+    0% {
+      background-color: rgba(10, 0, 39, 0.75);
+    }
+
+    25% {
+      background-color: rgba(0, 52, 95, 0.75);    
+    }
+  
+    50% {
+      background-color: rgba(5, 105, 78, 0.75);    
+    }
+
+    75% {
+      background-color: rgba(0, 121, 30, 0.75);    
+    }
+  
+    100% {
+      background-color: constants.$dijkstraColor;
+    }
+  }
+
+  &.node-shortest-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+  @keyframes shortestPath {
+    0% {
+      background-color: rgb(26, 0, 26);
+    }
+
+    50% {
+      background-color: rgb(101, 0, 121);
+    }
+
+    100% {
+      background-color: constants.$shortestPathColor;
+    }
   }
 }

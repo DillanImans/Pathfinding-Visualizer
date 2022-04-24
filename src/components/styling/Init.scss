@@ -2,6 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  &.mouseOff {
+    pointer-events: none;
+  }
+
+  &.mouseOn {
+    pointer-events: all;
+  }
 }
 
 .bodyStyle::-webkit-scrollbar {

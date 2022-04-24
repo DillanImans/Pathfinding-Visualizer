@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { mouseIsPressedAction, gridAction } from './actions';
+import { mouseIsPressedAction, gridAction, afterVisualizeAction } from './actions';
 
 import HeaderAndKeys from './HeaderAndKeys';
-import Grid from './Grid';
+import Grid from './Grid.jsx';
 import './styling/Visualizer.scss';
 import './styling/Init.scss';
 
@@ -17,14 +17,21 @@ class Visualizer extends Component {
     this.props.mouseIsPressedAction("");
   }
 
+  // Only active after visualized.
+  refreshSite = () => {
+    if(this.props.afterVisualizeState === true){
+      window.location.reload();
+    }
+  }
+
   render(){
     return (
       <div className="visualizerCon">
         <div className="hnkVisualizerCon">
           <HeaderAndKeys  />
         </div>
-        <div className="gridVisualizerCon" onMouseLeave={this.handleMouseOut}>
-          <Grid/>
+        <div className="gridVisualizerCon" onMouseLeave={this.handleMouseOut} onMouseDown={this.refreshSite}>
+          <Grid />
         </div>
       </div>
     )
@@ -33,8 +40,9 @@ class Visualizer extends Component {
 
 const mapStateToProps = (state) => {
   return { mouseIsPressedState: state.mouseIsPressedState,
-           gridState: state.gridState
+           gridState: state.gridState,
+           afterVisualizeState: state.afterVisualizeState
   }
 }
 
-export default connect(mapStateToProps, { mouseIsPressedAction, gridAction })(Visualizer);
+export default connect(mapStateToProps, { mouseIsPressedAction, gridAction, afterVisualizeAction })(Visualizer);

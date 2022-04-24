@@ -26,7 +26,8 @@ class Node extends Component {
     isWall ? "wallTing" : "";
     
     return (
-      <div 
+      <div
+      id={`node-${col}-${row}`}
       className={`nodeCon ${toggleWall}`}
       onMouseDown={() => onMouseDown(col, row)}
       onMouseEnter={() => onMouseEnter(col, row)}

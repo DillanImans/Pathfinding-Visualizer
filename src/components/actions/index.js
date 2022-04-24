@@ -13,3 +13,11 @@ export const gridAction = (grid) => {
     payload: grid
   }
 }
+
+// For after Visualize.
+export const afterVisualizeAction = (grid) => {
+  return {
+    type: "AFTER_VISUALIZE",
+    payload: grid
+  }
+}
