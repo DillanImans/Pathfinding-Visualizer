@@ -24,7 +24,8 @@ A Pathfinding Visualizer for Pathfinding-Algorithms (currently only Dijkstra)
 ----
 ### Personal Importance
 I've always wanted to make a Pathfinding Algorithm Visualizer, and here I finally have!
-Making this whole thing led me to learn a things from how amazing React & Redux is,
+Inspired by Clement Mihalescu, making this whole thing 
+led me to learn a few things such as: how amazing React & Redux is,
 how object and properties are crucial to software development, and how beautiful
 the world of computer science is with all their theories and implemantations.
 Looking forward to put more and more into this project!
