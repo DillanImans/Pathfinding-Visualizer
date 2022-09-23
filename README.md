@@ -17,7 +17,8 @@ A Pathfinding Visualizer for Pathfinding-Algorithms (currently only Dijkstra)
 * Certain styling and functions could be made better.
 ----
 ### Future Updates
-No plan on any updates.
+No plan on any future updates.
+
 ----
 ### Personal Importance
 I've always wanted to make a Pathfinding Algorithm Visualizer, and here I finally have!
