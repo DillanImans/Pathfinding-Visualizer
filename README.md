@@ -9,18 +9,12 @@ A Pathfinding Visualizer for Pathfinding-Algorithms (currently only Dijkstra)
 ----
 ### Project Characteristics
 * Made with React & Redux.
-* Pathfinding Algorithms include: Dijkstra, (coming soon).
+* Pathfinding Algorithms include: Dijkstra.
 * Comments on Algorithms, hence an explanation for how everything works.
 ----
 ### Project Weaknesses
 * Only available for Desktop.
 * Certain styling and functions could be made better.
-----
-### Future Updates
-* More Algorithms.
-* Responsive through all devices.
-* Cleaner styling and animations.
-* Weighted Algorithms.
 ----
 ### Personal Importance
 I've always wanted to make a Pathfinding Algorithm Visualizer, and here I finally have!
