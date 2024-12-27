@@ -1,5 +1,5 @@
 # Pathfinding Visualizer
-> Preview Link: https://pathfind-visualizer.netlify.com/
+> Preview Link: [https://pathfind-visualizer.netlify.com/](https://pathfind-visualizer.netlify.app/)
 
 ![Preview](https://github.com/DillanImans/Pathfinding-Visualizer/blob/master/src/previewPathfind.png)
 
